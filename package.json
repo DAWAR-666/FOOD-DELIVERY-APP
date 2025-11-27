@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "name": "food-delivery-app",
+  "version": "1.0.0",
+  "description": "foodApp",
+  
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DAWAR-666/FOOD-DELIVERY-APP.git"
+  },
+  "keywords": [
+    "DAWAR",
+    "FOOD-APP",
+    "FoodApp"
+  ],
+  "author": "DAWAR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DAWAR-666/FOOD-DELIVERY-APP/issues"
+  },
+  "homepage": "https://github.com/DAWAR-666/FOOD-DELIVERY-APP#readme"
+}
