@@ -70,6 +70,26 @@
     width: 100%;
     border-radius: 8px;
 }
+.restaurantCard h3{
+    margin: 10px 0 5px 0;
+}
+.restaurantCard p{
+    color: #555;
+    font-size: 14px;
+}
+.restaurantCard button{
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.restaurantCard button:hover{
+    background-color: #e5533d;
+}
+
 
 
 
