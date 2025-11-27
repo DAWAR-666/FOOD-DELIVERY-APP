@@ -17,12 +17,25 @@ const Heading= () =>{
         
     );
 };
+const Body= () =>{
+    return (
+        <div className="body"> 
+            <div className="searchbar">
+                <input type="text" placeholder="Search for food items..." />
+                <button>Search</button>
+            </div>
+            
+        </div>
+    );
+}
+
 const FunctionalComponent= ()=>(
     <div className="appLayout">
-        <header />
+        <Heading />
         <h2>Order your favourite food from here</h2>
         // Other components will go here
-        search bar
+        searchbar
+
     </div>
 );
 const root=ReactDOM.createRoot(document.getElementById("root"));
