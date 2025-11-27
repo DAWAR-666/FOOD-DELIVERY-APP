@@ -24,7 +24,14 @@ const Body= () =>{
                 <input type="text" placeholder="Search for food items..." />
                 <button>Search</button>
             </div>
-            
+            <div className="foodItems">
+                <div className="foodItem">
+                    <img src="https://via.placeholder.com/150" alt="Food Item 1" />
+                    <h3>Food Item 1</h3>
+                    <p>Description of Food Item 1</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
         </div>
     );
 }
@@ -35,6 +42,8 @@ const FunctionalComponent= ()=>(
         <h2>Order your favourite food from here</h2>
         // Other components will go here
         searchbar
+        <Body />
+
 
     </div>
 );
