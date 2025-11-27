@@ -17,9 +17,9 @@ const Heading= () =>{
         
     );
 };
-const FoodItem= () =>{
+const RestaurantCard= () =>{
     return (
-        <div className="foodItem">
+        <div className="restaurantCard">
             <img src="https://via.placeholder.com/150" alt="Food Item" />
             <h3>Food Item Name</h3>
             <p>Description of the food item.</p>
@@ -34,13 +34,12 @@ const Body= () =>{
                 <input type="text" placeholder="Search for food items..." />
                 <button>Search</button>
             </div>
-            <div className="foodItemsContainer">
-                <FoodItem />
-                <FoodItem />
-                <FoodItem />
-                <FoodItem />
-                <FoodItem />
-                <FoodItem />   
+            <div className="restaurantList">
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                   
             </div>    
         </div>
     );

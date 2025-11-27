@@ -50,5 +50,21 @@
     background-color: #ff6347;
     color: white;
 }
+.restaurantList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.restaurantCard{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 
