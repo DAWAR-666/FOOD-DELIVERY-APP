@@ -30,7 +30,7 @@ const FoodItem= () =>{
 const Body= () =>{
     return (
         <div className="body"> 
-            <div className="searchbar">
+            <div className="searchBar">
                 <input type="text" placeholder="Search for food items..." />
                 <button>Search</button>
             </div>
