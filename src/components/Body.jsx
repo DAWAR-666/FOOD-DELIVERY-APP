@@ -1,3 +1,4 @@
+import RestaurantCard from "./RestaurantCard";
 const Body= () =>{
     return (
         <div className="body"> 
