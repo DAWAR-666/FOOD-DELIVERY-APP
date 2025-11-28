@@ -3,23 +3,7 @@ import ReactDOM from "react-dom/client";
 import Heading from "./Header.jsx";
 import RestaurantCard from "./RestaurantCard.jsx";
 
-const Body= () =>{
-    return (
-        <div className="body"> 
-            <div className="searchBar">
-                <input type="text" placeholder="Search for food items..." />
-                <button>Search</button>
-            </div>
-            <div className="restaurantList">
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                   
-            </div>    
-        </div>
-    );
-}
+
 
 const FunctionalComponent= ()=>(
     <div className="appLayout">
