@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Heading from "./Header.jsx";
+import RestaurantCard from "./RestaurantCard.jsx";
 
 const Body= () =>{
     return (
