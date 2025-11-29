@@ -9,7 +9,7 @@ const Body= () =>{
             </div>
             <div className="restaurantList">
                 {resData.map((restaurant)=> {
-                    return <RestaurantCard res={restaurant} />
+                    return <RestaurantCard key={restaurant.id}res={restaurant} />
                 })}
                    
             </div>    
