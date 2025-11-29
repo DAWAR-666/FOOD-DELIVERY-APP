@@ -1,4 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
+import resData from "../utils/mockData";
 const Body= () =>{
     return (
         <div className="body"> 
@@ -7,8 +8,8 @@ const Body= () =>{
                 <button>Search</button>
             </div>
             <div className="restaurantList">
-                {resList.map((restaurant)=> {
-                    return <RestaurantCard key={resCard.id} resData={restaurant}/>
+                {resData.map((restaurant)=> {
+                    return <RestaurantCard res={restaurant} />
                 })}
                    
             </div>    

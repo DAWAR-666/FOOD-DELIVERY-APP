@@ -1,4 +1,4 @@
-resData=[
+const resData=[
     {
         id:1,
         name:"Food Item 1",
@@ -17,6 +17,12 @@ resData=[
         name:"Food Item 3",
         description:"Description for Food Item 3",
         rating:3.5
+    },
+    {
+        id:4,
+        name:"Food Item 4",
+        description:"Description for Food Item 4",
+        rating:5.0
     }
 ]
 export default resData;
