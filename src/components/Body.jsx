@@ -7,10 +7,9 @@ const Body= () =>{
                 <button>Search</button>
             </div>
             <div className="restaurantList">
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
+                {resList.map((restaurant)=> {
+                    return <RestaurantCard key={resCard.id} resData={restaurant}/>
+                })}
                    
             </div>    
         </div>
