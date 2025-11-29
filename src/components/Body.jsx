@@ -9,12 +9,12 @@ const Body= () =>{
                 <input type="text" placeholder="Search for food items..." />
                 <button
                 onClick={()=>{
-                    let filteredList=listOfRestaurants.filter(res=>res.rating>4);
+                    const filteredList=listOfRestaurants.filter(res=>res.rating>4);
                     setListOfRestaurants(filteredList);
                 }}>top rating ({'>'}4)</button>
             </div>
             <div className="restaurantList">
-                {resData.map((restaurant)=> {
+                {listOfRestaurants.map((restaurant)=> {
                     return <RestaurantCard key={restaurant.id}res={restaurant} />
                 })}
                    
