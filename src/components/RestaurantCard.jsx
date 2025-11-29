@@ -5,9 +5,9 @@ const RestaurantCard= (props) =>{
     return (
         <div className="restaurantCard">
             <img src="https://www.warmoven.in/cdn/shop/files/duel-delight-chocolate_-cake.jpg?v=1749833568&width=1080" alt="Food Item" />
-            <h3>{resData.name}</h3>
-            <p>{resData.description}</p>
-            <h4>{resData.rating}</h4>
+            <h3>{name}</h3>
+            <p>{description}</p>
+            <h4>{rating}</h4>
         </div>
     );
 }
