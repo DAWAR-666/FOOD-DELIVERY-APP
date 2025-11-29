@@ -5,7 +5,7 @@ const Body= () =>{
         <div className="body"> 
             <div className="searchBar">
                 <input type="text" placeholder="Search for food items..." />
-                <button>Search</button>
+                <button>top rating ({'>'}4)</button>
             </div>
             <div className="restaurantList">
                 {resData.map((restaurant)=> {
