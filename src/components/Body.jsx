@@ -38,7 +38,7 @@ const Body= () =>{
                 <button className="search"
                 onClick={
                     ()=>{
-                        setListOfRestaurants(listOfRestaurants.filter((res)=>
+                        setfilterList(listOfRestaurants.filter((res)=>
                             res.info.name.toLowerCase().includes(searchText.toLowerCase()))
                     );}
 
@@ -48,11 +48,11 @@ const Body= () =>{
                 className="topRating"
                 onClick={()=>{
                     const filteredList=listOfRestaurants.filter(res=>res.info.avgRating>4.5);
-                    setListOfRestaurants(filteredList);
+                    setfilterList(filteredList);
                 }}>top rating ({'>'}4)</button>
             </div>
             <div className="restaurantList">
-                {listOfRestaurants.map((restaurant)=> {
+                {filterList.map((restaurant)=> {
                     return <RestaurantCard key={restaurant.info.id}res={restaurant} />
                 })}
                    
