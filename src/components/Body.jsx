@@ -3,7 +3,8 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 const Body= () =>{
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
-    const [searchText,setsearchText]=useState=("");
+    const [searchText,setsearchText]=useState("");
+    const [filterList,setfilterList]=useState([]);
 
 
     useEffect(()=>{
@@ -16,6 +17,7 @@ const Body= () =>{
         const json=await data.json();
         console.log(json);
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setfilterList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     
     
@@ -25,7 +27,7 @@ const Body= () =>{
             <div className="searchBar">
                 <input type="text" placeholder="Search for food items..." 
                 className="searchBar"
-                value={searchtext}
+                value={searchText}
                 onChange={
                     (e)=>  {
                         setsearchText(e.target.value);
@@ -41,7 +43,7 @@ const Body= () =>{
                     );}
 
 
-                }></button>
+                }>SEARCH</button>
                 <button
                 className="topRating"
                 onClick={()=>{
