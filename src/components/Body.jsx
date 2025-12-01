@@ -24,6 +24,7 @@ const Body= () =>{
     return listOfRestaurants.length === 0?
     <h1>Loading Restaurants...</h1>:(
         <div className="body"> 
+        <div className="filtering">
             <div className="searchBar">
                 <input type="text" placeholder="Search for food items..." 
                 className="searchBar"
@@ -35,7 +36,7 @@ const Body= () =>{
 
                 }
                 />
-                <button className="search"
+                <button className="filterBtn"
                 onClick={
                     ()=>{
                         setfilterList(listOfRestaurants.filter((res)=>
@@ -44,12 +45,14 @@ const Body= () =>{
 
 
                 }>SEARCH</button>
+            </div>
                 <button
-                className="topRating"
+                className="filterBtn"
                 onClick={()=>{
                     const filteredList=filterList.filter(res=>res.info.avgRating>4.5);
                     setfilterList(filteredList);
                 }}>top rating ({'>'}4)</button>
+            
             </div>
             <div className="restaurantList">
                 {filterList.map((restaurant)=> {
