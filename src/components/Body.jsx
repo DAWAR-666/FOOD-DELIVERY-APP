@@ -47,7 +47,7 @@ const Body= () =>{
                 <button
                 className="topRating"
                 onClick={()=>{
-                    const filteredList=listOfRestaurants.filter(res=>res.info.avgRating>4.5);
+                    const filteredList=filterList.filter(res=>res.info.avgRating>4.5);
                     setfilterList(filteredList);
                 }}>top rating ({'>'}4)</button>
             </div>
