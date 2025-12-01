@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 const Body= () =>{
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
+    const [searchText,setsearchText]=useState=("");
 
 
     useEffect(()=>{
@@ -22,8 +23,27 @@ const Body= () =>{
     <h1>Loading Restaurants...</h1>:(
         <div className="body"> 
             <div className="searchBar">
-                <input type="text" placeholder="Search for food items..." />
+                <input type="text" placeholder="Search for food items..." 
+                className="searchBar"
+                value={searchtext}
+                onChange={
+                    (e)=>  {
+                        setsearchText(e.target.value);
+                    }
+
+                }
+                />
+                <button className="search"
+                onClick={
+                    ()=>{
+                        setListOfRestaurants(listOfRestaurants.filter((res)=>
+                            res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+                    );}
+
+
+                }></button>
                 <button
+                className="topRating"
                 onClick={()=>{
                     const filteredList=listOfRestaurants.filter(res=>res.info.avgRating>4.5);
                     setListOfRestaurants(filteredList);
