@@ -4,7 +4,8 @@ import Heading from "./components/Header.jsx";
 import RestaurantCard from "./components/RestaurantCard.jsx";
 import Body from "./components/Body.jsx";
 import {createBrowserRouter ,RouterProvider} from "react-router-dom";
-
+import About from "./components/About.jsx";
+import Error from "./components/Error.jsx";
 const AppLayout= ()=>(
     
     <div className="appLayout">
