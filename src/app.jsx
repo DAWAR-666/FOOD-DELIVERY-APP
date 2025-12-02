@@ -5,7 +5,15 @@ import RestaurantCard from "./components/RestaurantCard.jsx";
 import Body from "./components/Body.jsx";
 import {createBrowserRouter ,RouterProvider} from "react-router-dom";
 
-const FunctionalComponent= ()=>(
+const AppLayout= ()=>(
+    const router=createBrowserRouter([
+        {
+            path="/",
+            element:<AppLayout />,
+            errorElement:<Error />,
+        },
+        
+    ])
     <div className="appLayout">
         <Heading />
         <h2>Order your favourite food from here</h2>
@@ -14,4 +22,4 @@ const FunctionalComponent= ()=>(
 );
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(<FunctionalComponent />);
+root.render(< />);
