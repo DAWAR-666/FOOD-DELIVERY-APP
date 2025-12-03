@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {createBrowserRouter ,RouterProvider} from "react-router-dom";   
+import {createBrowserRouter ,Outlet,RouterProvider} from "react-router-dom";   
 import Heading from "./components/Header.jsx";
 import RestaurantCard from "./components/RestaurantCard.jsx";
 import Body from "./components/Body.jsx";
@@ -12,7 +12,7 @@ const AppLayout= ()=>(
     <div className="appLayout">
         <Heading />
         <h2>Order your favourite food from here</h2>
-        <Body />
+        <Outlet />
     </div>
 );
 const approuter=createBrowserRouter([
