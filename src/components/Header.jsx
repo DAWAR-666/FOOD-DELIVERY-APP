@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 const Heading= () =>{
     return (
         <div className="header">
@@ -6,10 +7,18 @@ const Heading= () =>{
             </div>
             <h1>Food Delivery App</h1>
             <ul>
-                <li>HOME</li>
-                <li>ABOUT US</li>
-                <li>CONTACT</li>
-                <li>LOGIN</li>
+                <li>
+                    <Link to="/">HOME</Link>
+                </li>
+                <li>
+                    <Link to="/about">ABOUT US</Link>
+                </li>
+                <li>
+                    <Link to="/contact">CONTACT US</Link>
+                </li>
+                <li>
+                    <button className="loginbtn">LOGIN</button>
+                </li>
             </ul>
         </div>
         
