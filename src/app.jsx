@@ -19,13 +19,22 @@ const approuter=createBrowserRouter([
         {
             path:"/",
             element:<AppLayout />,
+            children:[
+              {
+                path:"/",
+                element:"<Body />"
+              },
+              {
+                path:"about",
+                element:"<About />"
+              } ,
+              {
+                path:"contact",
+                element:"<Contact />"
+              }
+            ],
             errorElement:<Error />,
-        },
-        {
-            path:"about",
-            element:<About />
-        }
-        
+        }        
     ]);
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={approuter}/>);
