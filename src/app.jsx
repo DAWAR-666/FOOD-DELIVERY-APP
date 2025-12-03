@@ -23,15 +23,15 @@ const approuter=createBrowserRouter([
             children:[
               {
                 path:"/",
-                element:"<Body />"
+                element:<Body />
               },
               {
                 path:"about",
-                element:"<About />"
+                element:<About />
               } ,
               {
                 path:"contact",
-                element:"<Contact />"
+                element:<Contact />
               }
             ],
             errorElement:<Error />,
