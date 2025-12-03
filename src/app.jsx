@@ -5,7 +5,7 @@ import Heading from "./components/Header.jsx";
 import RestaurantCard from "./components/RestaurantCard.jsx";
 import Body from "./components/Body.jsx";
 import Contact from "./components/Contact.jsx";
-
+import RestaurantMenu from "./components/RestaurantMenu.jsx";
 import About from "./components/About.jsx";
 import Error from "./components/Error.jsx";
 const AppLayout= ()=>(
@@ -34,7 +34,7 @@ const approuter=createBrowserRouter([
                 element:<Contact />
               },
               {
-                path:"/restaurant/:resId",
+                path:"/restaurants/:resId",
                 element:<RestaurantMenu />
               }
             ],
