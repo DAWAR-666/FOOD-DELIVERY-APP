@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-
+import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 const Body= () =>{
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
@@ -13,9 +13,9 @@ const Body= () =>{
     
     
     const fecthData=async ()=>{
-        const data=await fetch ("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data=await fetch ("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
         const json=await data.json();
-        console.log(json);
+        // console.log(json);
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilterList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
@@ -51,12 +51,14 @@ const Body= () =>{
                 onClick={()=>{
                     const filteredList=filterList.filter(res=>res.info.avgRating>4.5);
                     setfilterList(filteredList);
-                }}>top rating ({'>'}4)</button>
+                }}>top rating ({'>'}4.5)</button>
             
             </div>
             <div className="restaurantList">
                 {filterList.map((restaurant)=> {
-                    return <RestaurantCard key={restaurant.info.id}res={restaurant} />
+                    return <Link to={"/restaurants/:"+restaurant.info.id} key={restaurant.info.id}>
+                        <RestaurantCard res={restaurant} />
+                    </Link>;
                 })}
                    
             </div>    
