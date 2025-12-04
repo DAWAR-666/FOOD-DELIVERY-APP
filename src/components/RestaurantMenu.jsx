@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
+import { FETCH_MENU_URL } from "../utils/Const";
 const RestaurantMenu=()=>{
     const {resId}=useParams();
     const [menuData,setMenuData]=useState(null);
@@ -7,7 +8,9 @@ const RestaurantMenu=()=>{
         fetchMenu();
     },[]);
     const fetchMenu=async()=>{
-        const abcd=await fetch("https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId="+resId.slice(1));
+        const url=FETCH_MENU_URL + resId.slice(1);
+    
+        const abcd=await fetch(url);
         const json=await abcd.json();
         // console.log(json);
         setMenuData(json?.data);
@@ -17,6 +20,8 @@ const RestaurantMenu=()=>{
     };
     const {name,avgRating,cuisines}=menuData?.cards[2]?.card?.card?.info;
     const {items}=menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    console.log(menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((e) =>
+    e.card?.card?.hasOwnProperty("itemCards")))
     return(
         <div className="menu">
             <h1>{name}</h1>

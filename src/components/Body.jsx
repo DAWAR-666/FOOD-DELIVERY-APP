@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
+import { RES_LIST } from "../utils/Const";
 const Body= () =>{
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
     const [searchText,setsearchText]=useState("");
@@ -13,7 +14,7 @@ const Body= () =>{
     
     
     const fecthData=async ()=>{
-        const data=await fetch ("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+        const data=await fetch (RES_LIST);
         const json=await data.json();
         // console.log(json);
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
