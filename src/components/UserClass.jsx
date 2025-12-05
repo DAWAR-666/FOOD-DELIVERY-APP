@@ -3,7 +3,7 @@ class UserClass extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            cnt1:1,
+            cnt:0,
             cnt2:2
         }
     };
@@ -15,8 +15,11 @@ class UserClass extends React.Component{
                 <p>This is a user profile rendered using a class component.</p>
                 cnt1: {this.state.cnt1}
                 <br/>
-                cnt2: {this.state.cnt2}
-                <br/>
+                <button onClick={
+                    this.setState({
+                        cnt:this.state.cnt+1
+                    })
+                }>cnt ++</button>
                 <p>{this.props.name}</p>
             </div>
         );
