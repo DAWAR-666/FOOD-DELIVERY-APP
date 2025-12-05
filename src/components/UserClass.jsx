@@ -13,13 +13,13 @@ class UserClass extends React.Component{
             <div>
                 <h2>Class Component User</h2>
                 <p>This is a user profile rendered using a class component.</p>
-                cnt1: {this.state.cnt1}
+                cnt1: {this.state.cnt}
                 <br/>
-                <button onClick={
+                <button onClick={()=>{
                     this.setState({
                         cnt:this.state.cnt+1
                     })
-                }>cnt ++</button>
+                }}>cnt ++</button>
                 <p>{this.props.name}</p>
             </div>
         );
