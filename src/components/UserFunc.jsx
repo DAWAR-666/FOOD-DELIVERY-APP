@@ -3,7 +3,7 @@ const UserFunc=(props)=>{
         <div>
             <h2>Functional Component User</h2>
             <p>This is a user profile rendered using a functional component.</p>
-            <p>props.name</p>
+            <p>{props.name}</p>
         </div>
     );
 }
