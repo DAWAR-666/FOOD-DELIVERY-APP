@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { RES_LIST } from "../utils/Const";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body= () =>{
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
     const [searchText,setsearchText]=useState("");
@@ -19,6 +20,10 @@ const Body= () =>{
         // console.log(json);
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilterList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    }
+    const isOnline=useOnlineStatus();
+    if(!isOnline){
+        return <h1>🔴 Offline, Please check your internet connection!!</h1>
     }
     
     
