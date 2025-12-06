@@ -10,7 +10,7 @@ const Heading= () =>{
             <h1>Food Delivery App</h1>
             <ul>
                 <li>
-                    ONLINE: useOnlineStatus() ? "✅" : "🔴"
+                    ONLINE: {useOnlineStatus() ? "✅" : "🔴"}
                 </li>
                 <li>
                     <Link to="/">HOME</Link>
