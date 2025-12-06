@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import { APP_LOGO_URL } from "../utils/Const";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Heading= () =>{
     return (
         <div className="header">
@@ -8,6 +9,9 @@ const Heading= () =>{
             </div>
             <h1>Food Delivery App</h1>
             <ul>
+                <li>
+                    ONLINE: useOnlineStatus() ? "✅" : "🔴"
+                </li>
                 <li>
                     <Link to="/">HOME</Link>
                 </li>
