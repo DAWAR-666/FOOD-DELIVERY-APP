@@ -1,10 +1,16 @@
 import React from "react";
-class UserClass extends React.Component{
-    constructor(props){
+interface UserProps{
+    name:string;
+}
+interface UserState{
+    cnt:number;
+}
+class UserClass extends React.Component<UserProps,UserState>{
+    constructor(props:UserProps){
         super(props);
         this.state={
             cnt:0,
-            cnt2:2
+            
         }
     };
     
