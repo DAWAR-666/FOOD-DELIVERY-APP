@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {createBrowserRouter ,Outlet,RouterProvider} from "react-router-dom";   
-import Heading from "./components/Header.js";
-import RestaurantCard from "./components/RestaurantCard.js";
-import Body from "./components/Body.js";
-import Contact from "./components/Contact.js";
-import RestaurantMenu from "./components/RestaurantMenu.js";
-import About from "./components/About.jsx";
-import Error from "./components/Error.js";
+import Heading from "./components/Header";
+import Body from "./components/Body";
+import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
+import About from "./components/About";
+import Error from "./components/Error";
 const AppLayout= ()=>(
     
     <div className="appLayout">
@@ -41,5 +40,5 @@ const approuter=createBrowserRouter([
             errorElement:<Error />,
         }        
     ]);
-const root=ReactDOM.createRoot(document.getElementById("root"));
+const root=ReactDOM.createRoot(document.getElementById("root")!);
 root.render(<RouterProvider router={approuter}/>);
