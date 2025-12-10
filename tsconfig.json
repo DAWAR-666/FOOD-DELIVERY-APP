@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    /* **Type Checking** */
+    "strict": true,                         /* Enable all strict type-checking options (Recommended) */
+    "skipLibCheck": true,                   /* Skip type checking of declaration files (Faster build) */
+    "forceConsistentCasingInFileNames": true, /* Ensure files are imported using their real casing */
+
+    /* **Modules** */
+    "module": "commonjs",                   /* Specify module code generation */
+    "target": "es2020",                     /* Specify ECMAScript target version for output */
+    "esModuleInterop": true,                /* Allows you to use `import * as React from 'react'` as `import React from 'react'` */
+    "isolatedModules": true,                /* Ensures files can be transpiled independently (Parcel's requirement) */
+
+    /* **React/JSX** */
+    "jsx": "react-jsx",                     /* Specify JSX code generation for modern React */
+    
+    /* **Source Maps & Debugging** */
+    // "sourceMap": true,                   /* Optional: Generates corresponding '.map' files */
+    // "outDir": "./dist",                  /* Optional: Redirect output structure to a directory (Parcel handles this usually) */
+
+    /* **Library & Environment** */
+    "lib": [
+      "dom",                                /* Include DOM type definitions (for browser code) */
+      "dom.iterable",
+      "esnext"                              /* Include latest ES features */
+    ]
+  },
+  "include": [
+    "src/**/*"                              /* Tell the compiler to check all files inside the 'src' folder */
+  ],
+  "exclude": [
+    "node_modules",                         /* Do not check files in node_modules */
+    "dist"                                  /* Do not check generated files in dist */
+  ]
+}
