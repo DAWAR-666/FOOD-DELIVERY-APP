@@ -1,4 +1,4 @@
-import UserFunc from './UserFunc';
+
 import UserClass from './UserClass';
 const About=()=>{
     return(
