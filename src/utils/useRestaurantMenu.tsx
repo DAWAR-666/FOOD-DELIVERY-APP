@@ -4,7 +4,7 @@ const useRestaurantMenu = (resId : string) => {
     const [menuData,setMenuData]=useState(null);
     useEffect(()=>{
         fetchData();
-    })
+    },[])
     const fetchData=async()=>{
         const url=FETCH_MENU_URL + resId.slice(1);
         const abcd=await fetch(url);
