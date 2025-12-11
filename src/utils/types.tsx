@@ -17,4 +17,5 @@ export interface RestaurantCardData { // This is the wrapper type
     res: { 
         info: CardInfo;
     };
+    info: CardInfo;
 }

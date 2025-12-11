@@ -3,10 +3,11 @@ import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { RES_LIST } from "../utils/Const";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import {RestaurantCardData,CardInfo} from "../utils/types";
 const Body= () =>{
-    const [listOfRestaurants,setListOfRestaurants]=useState([]);
-    const [searchText,setsearchText]=useState("");
-    const [filterList,setfilterList]=useState([]);
+    const [listOfRestaurants,setListOfRestaurants]=useState<RestaurantCardData[]> ([]);
+    const [searchText,setsearchText]=useState<string>("");
+    const [filterList,setfilterList]=useState<RestaurantCardData[]> ([]);
 
 
     useEffect(()=>{
@@ -21,7 +22,7 @@ const Body= () =>{
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilterList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
-    const isOnline=useOnlineStatus();
+    const isOnline : boolean=useOnlineStatus();
     if(!isOnline){
         return <h1>🔴 Offline, Please check your internet connection!!</h1>
     }

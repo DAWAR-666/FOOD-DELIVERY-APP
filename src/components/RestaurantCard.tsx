@@ -1,9 +1,11 @@
 import { RES_IMG_URL } from "../utils/Const";
 import { RestaurantCardData } from "../utils/types";
 
-
-const RestaurantCard= (props:RestaurantCardData) =>{
-    const {res}=props;
+type Props = {
+    res: RestaurantCardData;
+}
+const RestaurantCard:React.FC<Props>= ({res}) =>{
+    
     const {name,cloudinaryImageId,avgRating}=res?.info;
 
     return (
