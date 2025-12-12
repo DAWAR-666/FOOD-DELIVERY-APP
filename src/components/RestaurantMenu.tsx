@@ -2,8 +2,10 @@
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 const RestaurantMenu=()=>{
-    const {resId}=useParams();
-    
+    const {resId}=useParams<{resId:string}>();
+    if(!resId){
+        return <h1>Invalid Restaurant ID</h1>;
+    }
     const menuData=useRestaurantMenu(resId);
     if(!menuData){
         return <h1>Loading Menu...</h1>;
