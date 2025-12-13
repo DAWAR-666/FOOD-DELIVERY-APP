@@ -29,7 +29,7 @@ const Body= () =>{
     
     
     return listOfRestaurants.length === 0?
-    <h1>Loading Restaurants...</h1>:(
+    <h1 className="text-4xl flex justify-center m-20">Loading Restaurants...</h1>:(
         <div className="body"> 
         <div className="flex justify-center items-center gap-9 m-4 text-xl">
             <div className="gap-3 flex">
