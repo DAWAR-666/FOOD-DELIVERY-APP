@@ -9,11 +9,12 @@ const RestaurantCard:React.FC<Props>= ({resName}) =>{
     const {name,cloudinaryImageId,avgRating}=resName?.info;
 
     return (
-        <div className="restaurantCard">
-            <img src={RES_IMG_URL+cloudinaryImageId} alt="Food Item" />
-            <h3>{name}</h3>
+        <div className="border-2 border-[#ddd] p-4 m-4 h-100 w-80 hover:shadow-lg text-center">
+            <img src={RES_IMG_URL+cloudinaryImageId} alt="Food Item" 
+            className="w-full h-[70%]" />
+            <h3 className="m-1 text-xl">{name}</h3>
             
-            <h4>rating:{avgRating}</h4>
+            <h4 className="text-lg">rating:{avgRating}</h4>
         </div>
     );
 }
