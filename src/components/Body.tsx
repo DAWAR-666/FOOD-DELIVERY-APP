@@ -31,10 +31,10 @@ const Body= () =>{
     return listOfRestaurants.length === 0?
     <h1>Loading Restaurants...</h1>:(
         <div className="body"> 
-        <div className="filtering">
-            <div className="searchBar">
+        <div className="flex justify-center items-center gap-9 m-4 text-xl">
+            <div className="gap-3 flex">
                 <input type="text" placeholder="Search for food items..." 
-                className="searchBar"
+                className="w-60 p-2 border-2 border-gray-400 rounded-md"
                 value={searchText}
                 onChange={
                     (e)=>  {
@@ -43,7 +43,15 @@ const Body= () =>{
 
                 }
                 />
-                <button className="filterBtn"
+                <button className="p-2 
+                                    border-2 
+                                    border-gray-400 
+                                    rounded-md 
+                                    bg-white 
+                                    hover:bg-[#fb8a76] 
+                                    cursor-pointer
+                                    hover:scale-105
+                                   "
                 onClick={
                     ()=>{
                         setfilterList(listOfRestaurants.filter((res)=>
@@ -54,14 +62,21 @@ const Body= () =>{
                 }>SEARCH</button>
             </div>
                 <button
-                className="filterBtn"
+                className="p-2 
+                            border-2 
+                            border-gray-400 
+                            rounded-md 
+                            bg-white 
+                            hover:bg-[#fb8a76] 
+                            cursor-pointer
+                            hover:scale-105"
                 onClick={()=>{
                     const filteredList=filterList.filter(res=>res.info.avgRating>4.5);
                     setfilterList(filteredList);
                 }}>top rating ({'>'}4.5)</button>
             
             </div>
-            <div className="restaurantList">
+            <div className="flex flex-wrap justify-center gap-6 p-5">
                 {filterList.map((restaurant)=> {
                     return <Link to={"/restaurants/:"+restaurant.info.id} key={restaurant.info.id}>
                         <RestaurantCard resName={restaurant} />
