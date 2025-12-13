@@ -8,7 +8,7 @@ const RestaurantMenu=()=>{
     }
     const menuData=useRestaurantMenu(resId);
     if(!menuData){
-        return <h1>Loading Menu...</h1>;
+        return <h1 className="text-4xl flex justify-center m-20">Loading Menu...</h1>;
     };
     const {name,avgRating,cuisines}=menuData?.cards[2]?.card?.card?.info;
     const items=menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((e) =>
