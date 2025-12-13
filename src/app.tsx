@@ -9,9 +9,9 @@ import About from "./components/About";
 import Error from "./components/Error";
 const AppLayout= ()=>(
     
-    <div className="appLayout">
+    <div className="font-serif font-bold">
         <Heading />
-        <h2>Order your favourite food from here</h2>
+        
         <Outlet />
     </div>
 );
