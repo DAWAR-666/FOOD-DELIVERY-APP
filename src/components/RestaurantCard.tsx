@@ -17,12 +17,12 @@ const RestaurantCard= ({resName}) =>{
         </div>
     );
 }
-export const promotedCard=(RestaurantCard)=>{
+export const discountInfo=(RestaurantCard)=>{
     return (props)=>{
         return (
             <div>
                 <label >
-                    Promoted
+                    props
                 </label>
                 <RestaurantCard {...props} />
             </div>

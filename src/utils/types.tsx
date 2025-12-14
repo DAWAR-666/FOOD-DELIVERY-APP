@@ -12,6 +12,12 @@ export interface CardInfo {
   totalRatingsString: string
   veg?: boolean
   isNewlyOnboarded?: boolean
+  aggregatedDiscountInfoV3: AggregatedDiscountInfoV3
+}
+export interface AggregatedDiscountInfoV3 {
+  header: string
+  discountTag?: string
+  subHeader?: string
 }
 export interface RestaurantCardData { // This is the wrapper type
 
