@@ -18,4 +18,13 @@ const RestaurantCard:React.FC<Props>= ({resName}) =>{
         </div>
     );
 }
+export const promotedCard=()=>{
+    return ()=>{
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
 export default RestaurantCard;
