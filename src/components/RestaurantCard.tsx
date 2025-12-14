@@ -21,7 +21,7 @@ export const discountInfo=(RestaurantCard)=>{
     return (props)=>{
         return (
             <div>
-                <label >
+                <label className="absolute bg-red-300 rounded-lg mx-4  p-2">
                     {props.resName.info.aggregatedDiscountInfoV3.header }{props.resName.info.aggregatedDiscountInfoV3.hasOwnProperty("subHeader")? ` - ${props.resName.info.aggregatedDiscountInfoV3.subHeader}` :""}
                 </label>
                 <RestaurantCard {...props} />
