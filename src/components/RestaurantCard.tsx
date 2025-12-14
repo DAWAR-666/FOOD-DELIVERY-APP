@@ -22,7 +22,7 @@ export const discountInfo=(RestaurantCard)=>{
         return (
             <div>
                 <label >
-                    props
+                    props.info.aggregatedDiscountInfoV3.header
                 </label>
                 <RestaurantCard {...props} />
             </div>
