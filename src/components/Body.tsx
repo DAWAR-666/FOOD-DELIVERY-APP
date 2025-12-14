@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { discountInfo } from "./RestaurantCard";
 import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { RES_LIST } from "../utils/Const";
@@ -8,6 +8,7 @@ const Body= () =>{
     const [listOfRestaurants,setListOfRestaurants]=useState<RestaurantCardData[]> ([]);
     const [searchText,setsearchText]=useState<string>("");
     const [filterList,setfilterList]=useState<RestaurantCardData[]> ([]);
+    const DiscountedRestaurant=discountInfo(RestaurantCard);
 
 
     useEffect(()=>{
@@ -79,7 +80,7 @@ const Body= () =>{
             <div className="flex flex-wrap justify-center gap-6 p-5">
                 {filterList.map((restaurant)=> {
                     return <Link to={"/restaurants/:"+restaurant.info.id} key={restaurant.info.id}>
-                        <RestaurantCard resName={restaurant} />
+                        {restaurant.info.hasOwnProperty("aggregatedDiscountInfoV3")? (<DiscountedRestaurant resName={restaurant}/>) :(<RestaurantCard resName={restaurant} /> )}
                     </Link>;
                 })}
                    
