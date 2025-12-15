@@ -8,7 +8,7 @@ const RestaurantCard= ({resName}) =>{
     const {name,cloudinaryImageId,avgRating}=resName?.info;
 
     return (
-        <div className="border-2 border-[#ddd] p-4 m-4 h-100 w-80 hover:shadow-lg text-center">
+        <div className="border-2 border-[#ddd] p-4 m-4 h-100 w-80 hover:shadow-lg text-center rounded-lg">
             <img src={RES_IMG_URL+cloudinaryImageId} alt="Food Item" 
             className="w-full h-[70%]" />
             <h3 className="m-1 text-xl">{name}</h3>
