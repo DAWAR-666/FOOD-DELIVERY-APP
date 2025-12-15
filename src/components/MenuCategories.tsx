@@ -27,10 +27,10 @@ const MenuCategories = ({data}) => {
             </div>
             {data.card.card.itemCards.map((p)=>(
                         
-                        <div key={p.card.info.id}>
-                            <h4 className="flex
+                        <div key={p.card.info.id} className="flex
                                             bg-amber-50 
-                                            justify-center 
+                                            justify-between
+                                            items-center 
                                             border-amber-500 
                                             border-2 
                                             m-2 
@@ -40,7 +40,8 @@ const MenuCategories = ({data}) => {
                                             hover:scale-105 
                                             transition-transform 
                                             duration-200">
-                                {p.card.info.name} - ₹{p.card.info.price/100 || p.card.info.defaultPrice/100}
+                            <h4 >
+                                {p.card.info.name} </h4><h4> ₹{p.card.info.price/100 || p.card.info.defaultPrice/100}
                                 </h4>
                             
                         </div>))}  
