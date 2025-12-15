@@ -9,7 +9,11 @@ const MenuCategories = ({data}) => {
                             border-amber-500 
                             border-2 
                             rounded-md 
-                            bg-amber-50">
+                            bg-amber-50
+                            hover:bg-amber-100 
+                            hover:scale-105 
+                            transition-transform 
+                            duration-200">
                 <h2 className="text-2xl 
                                font-bold 
                                m-2
