@@ -1,10 +1,10 @@
 const MenuCategories = ({data}) => {
     return (
-        <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-6 p-4  ">
+        <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-6   ">
             <div className="flex 
                             justify-between 
                             items-center 
-                            m-2 
+                             
                             p-2 
                             border-amber-500 
                             border-2 
