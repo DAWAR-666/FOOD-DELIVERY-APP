@@ -15,8 +15,7 @@ const RestaurantMenu=()=>{
     const {name,avgRating,cuisines}=menuData?.cards[2]?.card?.card?.info;
     const items=menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((e) =>
     e.card?.card?.hasOwnProperty("itemCards"));
-    console.log(menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((e) =>
-    e.card?.card?.hasOwnProperty("itemCards")))
+    
     return(
         <div className="p-4 m-4">
             <div className="flex justify-center flex-col items-center mb-4">

@@ -1,6 +1,10 @@
+import { useState } from "react";
+
+
 const MenuCategories = ({data}) => {
+    const [showItems,setShowItems]=useState<boolean> (false);   
     return (
-        <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-6   ">
+        <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
             <div className="flex 
                             justify-between 
                             items-center 
@@ -13,19 +17,19 @@ const MenuCategories = ({data}) => {
                             hover:bg-amber-100 
                             hover:scale-105 
                             transition-transform 
-                            duration-200">
+                            duration-200"
+                onClick={() => setShowItems(!showItems)}>
                 <h2 className="text-2xl 
                                font-bold 
                                m-2
                                 p-2
-                                border-b-4
                             border-amber-500
                                 ">
                     {data.card.card.title}
                 </h2>
-                <h2>V</h2>
+                <h2>{showItems ? 'ᐱ' : 'V'}</h2>
             </div>
-            {data.card.card.itemCards.map((p)=>(
+            {showItems && data.card.card.itemCards.map((p)=>(
                         
                         <div key={p.card.info.id} className="flex
                                             bg-amber-50 
@@ -44,7 +48,7 @@ const MenuCategories = ({data}) => {
                                 {p.card.info.name} </h4><h4> ₹{p.card.info.price/100 || p.card.info.defaultPrice/100}
                                 </h4>
                             
-                        </div>))}  
+                        </div>))}
         </div>
     );
 }
