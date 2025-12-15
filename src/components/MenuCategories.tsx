@@ -1,14 +1,22 @@
 const MenuCategories = ({data}) => {
     return (
-        <div>
-            <div className="flex justify-between items-center">
+        <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-6 p-4  ">
+            <div className="flex 
+                            justify-between 
+                            items-center 
+                            m-2 
+                            p-2 
+                            border-amber-500 
+                            border-2 
+                            rounded-md 
+                            bg-amber-50">
                 <h2 className="text-2xl 
                                font-bold 
                                m-2
-                                 p-2
-                                    border-b-4
-                                    border-amber-300
-                                    ">
+                                p-2
+                                border-b-4
+                            border-amber-500
+                                ">
                     {data.card.card.title}
                 </h2>
                 <h2>V</h2>
@@ -16,9 +24,10 @@ const MenuCategories = ({data}) => {
             {data.card.card.itemCards.map((p)=>(
                         
                         <div key={p.card.info.id}>
-                            <h4 className="flex 
+                            <h4 className="flex
+                                            bg-amber-50 
                                             justify-center 
-                                            border-amber-200 
+                                            border-amber-500 
                                             border-2 
                                             m-2 
                                             p-2 
