@@ -1,9 +1,10 @@
-
+import { useState}  from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import MenuCategories from "./MenuCategories";
 
 const RestaurantMenu=()=>{
+    const [showIndex, setShowIndex]= useState<number>(0);
     const {resId}=useParams<{resId:string}>();
     if(!resId){
         return <h1>Invalid Restaurant ID</h1>;
@@ -26,7 +27,7 @@ const RestaurantMenu=()=>{
             </div>
             
                 {items.map((e,index)=>(
-                    <MenuCategories key={e.card.card.categoryId} data={e} showItems={index===0}/>))}             
+                    <MenuCategories key={e.card.card.categoryId} data={e} showItems={index===showIndex} changeIndex={() => setShowIndex(index)} />))}             
         </div>
     );
 };

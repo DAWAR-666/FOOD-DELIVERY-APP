@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const MenuCategories = ({data,showItems}) => {
+const MenuCategories = ({data,showItems,changeIndex}) => {
       
     return (
         <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
@@ -18,6 +18,7 @@ const MenuCategories = ({data,showItems}) => {
                             hover:scale-105 
                             transition-transform 
                             duration-200"
+                            onClick={changeIndex}
                 >
                 <h2 className="text-2xl 
                                font-bold 
