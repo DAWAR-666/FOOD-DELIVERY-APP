@@ -26,7 +26,7 @@ const RestaurantMenu=()=>{
             </div>
             
                 {items.map((e,index)=>(
-                    <MenuCategories key={e.card.card.categoryId} data={e} showItems={true}/>))}             
+                    <MenuCategories key={e.card.card.categoryId} data={e} showItems={index===0}/>))}             
         </div>
     );
 };
