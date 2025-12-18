@@ -25,8 +25,8 @@ const RestaurantMenu=()=>{
             <h2 className="text-2xl">Menu Items</h2>
             </div>
             
-                {items.map((e)=>(
-                    <MenuCategories key={e.card.card.categoryId} data={e}/>))}             
+                {items.map((e,index)=>(
+                    <MenuCategories key={e.card.card.categoryId} data={e} showItems={true}/>))}             
         </div>
     );
 };

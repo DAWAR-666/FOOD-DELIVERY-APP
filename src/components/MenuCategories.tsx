@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 
-const MenuCategories = ({data}) => {
-    const [showItems,setShowItems]=useState<boolean> (false);   
+const MenuCategories = ({data,showItems}) => {
+      
     return (
         <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
             <div className="flex 
@@ -18,7 +18,7 @@ const MenuCategories = ({data}) => {
                             hover:scale-105 
                             transition-transform 
                             duration-200"
-                onClick={() => setShowItems(!showItems)}>
+                >
                 <h2 className="text-2xl 
                                font-bold 
                                m-2
