@@ -1,7 +1,10 @@
 import {Link} from "react-router-dom";
 import { APP_LOGO_URL } from "../utils/Const";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 const Heading= () =>{
+    const {user}=useContext(UserContext);
     return (
         <div className="flex items-center justify-between p-4 bg-[#ff6347] shadow-md text-white">
             <div className="flex-1">
@@ -40,6 +43,15 @@ const Heading= () =>{
                                     transition-transform 
                                     duration-200">
                         <button className="loginbtn">LOGIN</button>
+                    </li>
+                    <li>
+                        <span className="m-2  
+                                    hover:text-gray-200 
+                                    hover:scale-105
+                                    transition-transform
+                                    duration-200">
+                            {user}
+                        </span>
                     </li>
                 </ul>
             </div>
