@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
 interface UserProps{
     name:string;
 }
@@ -17,6 +18,11 @@ class UserClass extends React.Component<UserProps,UserState>{
     render(){
         return(
             <div>
+                <UserContext.Consumer>
+                    {({user}) => (
+                        <p>Current User: {user}</p>
+                    )}
+                </UserContext.Consumer>
                 <h2>Class Component User</h2>
                 <p>This is a user profile rendered using a class component.</p>
                 cnt1: {this.state.cnt}
