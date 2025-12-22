@@ -14,7 +14,7 @@ const AppLayout= ()=>{
   useEffect(()=>{
     //API call to get user info
     const data= {
-      name:"Dawar"
+      name:"dummy"
     };
     setUserName(data.name);
   },[]);
@@ -22,8 +22,9 @@ const AppLayout= ()=>{
 
     <UserContext.Provider value={({user:userName})}>
     <div className="font-serif font-bold">
+        <UserContext.Provider value={{user:"Dawar"}}>
         <Heading />
-        
+        </UserContext.Provider>
         <Outlet />
     </div>
     </UserContext.Provider>
