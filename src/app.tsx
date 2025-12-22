@@ -10,7 +10,7 @@ import Error from "./components/Error";
 import UserContext from "./utils/UserContext";
 import { useState,useEffect } from "react";
 const AppLayout= ()=>{
-  const [userName,setUserName]=useState("");
+  const [userName,setUserName]=useState<string>("");
   useEffect(()=>{
     //API call to get user info
     const data= {
@@ -20,11 +20,11 @@ const AppLayout= ()=>{
   },[]);
   return(
 
-    <UserContext.Provider value={({user:userName})}>
+    <UserContext.Provider value={({user:userName , setUserName})}>
     <div className="font-serif font-bold">
-        <UserContext.Provider value={{user:"Dawar"}}>
+     
         <Heading />
-        </UserContext.Provider>
+   
         <Outlet />
     </div>
     </UserContext.Provider>
