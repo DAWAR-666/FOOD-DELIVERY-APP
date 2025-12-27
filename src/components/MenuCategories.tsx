@@ -1,8 +1,13 @@
 import { useState } from "react";
-
-
+import { useDispatch} from "react-redux";
+import { addItem } from "../utils/cartSlice";
 const MenuCategories = ({data,showItems,changeIndex}) => {
-      
+    const dispatch=useDispatch();
+    const handleClick=()=>{
+        //dispatch an action to add item to cart
+
+        dispatch(addItem(data.card.card.itemCards[0].card.info));
+    }
     return (
         <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
             <div className="flex 
@@ -52,7 +57,8 @@ const MenuCategories = ({data,showItems,changeIndex}) => {
                                                      hover:bg-amber-100 
                                             hover:scale-115 
                                             transition-transform 
-                                            duration-200">
+                                            duration-200" 
+                                            onClick={handleClick}>
                                                 ADD +
                                                 </button>
                                 </div>
