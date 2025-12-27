@@ -47,7 +47,17 @@ const MenuCategories = ({data,showItems,changeIndex}) => {
                                             duration-200">
                             <h4 >
                                 {p.card.info.name} </h4><h4> ₹{p.card.info.price/100 || p.card.info.defaultPrice/100}
-                                </h4>
+                                <div>
+                                <button className="border-2 rounded-md p-2 text-sm
+                                                     hover:bg-amber-100 
+                                            hover:scale-115 
+                                            transition-transform 
+                                            duration-200">
+                                                ADD +
+                                                </button>
+                                </div>
+                            </h4>
+                            
                             
                         </div>))}
         </div>

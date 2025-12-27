@@ -14,39 +14,39 @@ const Heading= () =>{
             </div>
             <h1 className="text-4xl font-bold font-serif">Food Delivery App</h1>
             <div className="flex-1 flex justify-end">
-                <ul className="flex flex-1 text-m font-semibold cursor-pointer ">
-                    <li className="m-2 ">
+                <ul className="flex flex-1 text-sm font-semibold cursor-pointer ">
+                    <li className="m-1">
                         ONLINE: {useOnlineStatus() ? "✅" : "🔴"}
                     </li>
-                    <li className="m-2  
+                    <li className="m-1  
                                     hover:text-gray-200 
                                     hover:scale-105 
                                     transition-transform 
                                     duration-200">
                         <Link to="/">HOME</Link>
                     </li>
-                    <li className="m-2  
+                    <li className="m-1  
                                     hover:text-gray-200 
                                     hover:scale-105 
                                     transition-transform 
                                     duration-200">
                         <Link to="/about">ABOUT US</Link>
                     </li >
-                    <li className="m-2  
+                    <li className="m-1  
                                     hover:text-gray-200 
                                     hover:scale-105 
                                     transition-transform 
                                     duration-200">
                         <Link to="/contact">CONTACT US</Link>
                     </li>
-                    <li className="m-2  
+                    <li className="m-1  
                                     hover:text-gray-200 
                                     hover:scale-105 
                                     transition-transform 
                                     duration-200">
                         <Link to="/cart">CART ({cartItems.length} items)</Link>
                     </li>
-                    <li className="m-2  
+                    <li className="m-1  
                                     hover:text-gray-200 
                                     hover:scale-105 
                                     transition-transform 
@@ -54,7 +54,7 @@ const Heading= () =>{
                         <button className="loginbtn">LOGIN</button>
                     </li>
                     <li>
-                        <span className="m-2  
+                        <span className="m-1  
                                     hover:text-gray-200 
                                     hover:scale-105
                                     transition-transform
