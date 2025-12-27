@@ -53,6 +53,10 @@ const approuter=createBrowserRouter([
               {
                 path:"/restaurants/:resId",
                 element:<RestaurantMenu />
+              },
+              {
+                path:"cart",
+                element:<h1>Cart Items</h1>
               }
             ],
             errorElement:<Error />,
