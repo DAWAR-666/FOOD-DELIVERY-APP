@@ -3,11 +3,12 @@ import { useDispatch} from "react-redux";
 import { addItem } from "../utils/cartSlice";
 const MenuCategories = ({data,showItems,changeIndex}) => {
     const dispatch=useDispatch();
-    const handleClick=()=>{
+    const handleClick=(item)=>{
         //dispatch an action to add item to cart
 
-        dispatch(addItem(data.card.card.itemCards[0].card.info));
+        dispatch(addItem(item));
     }
+    
     return (
         <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
             <div className="flex 
@@ -58,7 +59,7 @@ const MenuCategories = ({data,showItems,changeIndex}) => {
                                             hover:scale-115 
                                             transition-transform 
                                             duration-200" 
-                                            onClick={handleClick}>
+                                            onClick={()=>handleClick(p.card.info)}>
                                                 ADD +
                                                 </button>
                                 </div>
@@ -67,6 +68,7 @@ const MenuCategories = ({data,showItems,changeIndex}) => {
                             
                         </div>))}
         </div>
+        
     );
 }
 export default MenuCategories;
