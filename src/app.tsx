@@ -11,6 +11,7 @@ import UserContext from "./utils/UserContext";
 import { useState,useEffect } from "react";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 const AppLayout= ()=>{
   const [userName,setUserName]=useState<string>("");
