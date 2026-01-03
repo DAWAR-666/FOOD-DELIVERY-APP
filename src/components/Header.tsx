@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { useSelector } from "react-redux";
 const Heading= () =>{
     const cartItems=useSelector((store)=>store.cart.items);
-    
+    console.log(cartItems);
     const {user}=useContext(UserContext);
     return (
         <div className="flex items-center justify-between p-4 bg-[#ff6347] shadow-md text-white">

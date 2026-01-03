@@ -56,7 +56,7 @@ const approuter=createBrowserRouter([
               },
               {
                 path:"cart",
-                element:<h1>Cart Items</h1>
+                element:<Cart />
               }
             ],
             errorElement:<Error />,
