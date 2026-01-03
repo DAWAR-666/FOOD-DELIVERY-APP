@@ -14,6 +14,7 @@ const Cart = () => {
     };
     const data=useSelector((store)=>store.cart.items);
     return (
+    
     <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
             <h2 className="text-3xl text-center font-bold m-2 p-2 border-amber-500 border-2 rounded-md bg-amber-50">
                     Cart Items
@@ -26,6 +27,11 @@ const Cart = () => {
                         Clear Cart
                     </button>
 </div>
+{data.length===0 && (
+    <h3 className="text-xl text-center font-semibold m-2 p-2">
+        Your cart is empty!
+    </h3>
+)  }
         {data.map((p)=>(
                         
                         <div key={p.id} className="flex
