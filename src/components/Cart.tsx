@@ -9,7 +9,10 @@ const Cart = () => {
     }
     const data=useSelector((store)=>store.cart.items);
     return (
-    <div>
+    <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
+            <h2 className="text-3xl font-bold m-2 p-2 border-amber-500 border-2 rounded-md bg-amber-50 hover:bg-amber-100 hover:scale-105 transition-transform duration-200">
+                    Cart Items
+                </h2>
         {data.map((p)=>(
                         
                         <div key={p.id} className="flex
