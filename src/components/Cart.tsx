@@ -18,12 +18,14 @@ const Cart = () => {
             <h2 className="text-3xl text-center font-bold m-2 p-2 border-amber-500 border-2 rounded-md bg-amber-50">
                     Cart Items
                 </h2>
-                <button className="flex  m-2 p-2 border-2 rounded-md 
-                                    hover:bg-red-500 
-                                    hover:text-white"
-                        onClick={handleclearCart}>
-                    Clear Cart
-                </button>
+                <div className="flex justify-center">
+                    <button 
+                        className="m-2 p-2 border-2 rounded-md hover:bg-red-500 hover:text-white"
+                        onClick={handleclearCart}
+                    >
+                        Clear Cart
+                    </button>
+</div>
         {data.map((p)=>(
                         
                         <div key={p.id} className="flex
