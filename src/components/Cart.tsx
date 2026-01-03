@@ -1,18 +1,29 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { addItem,clearCart} from "../utils/cartSlice";
 const Cart = () => {
     const dispatch=useDispatch();
+    const handleclearCart=()=>{
+        //dispatch an action to clear the cart
+        dispatch(clearCart());
+
+    };
     const handleClick=(item)=>{
         //dispatch an action to add item to cart
 
         dispatch(addItem(item));
-    }
+    };
     const data=useSelector((store)=>store.cart.items);
     return (
     <div className="w-6/12 m-auto bg-amber-100 rounded-md mb-2   ">
-            <h2 className="text-3xl font-bold m-2 p-2 border-amber-500 border-2 rounded-md bg-amber-50 hover:bg-amber-100 hover:scale-105 transition-transform duration-200">
+            <h2 className="text-3xl text-center font-bold m-2 p-2 border-amber-500 border-2 rounded-md bg-amber-50">
                     Cart Items
                 </h2>
+                <button className="flex  m-2 p-2 border-2 rounded-md 
+                                    hover:bg-red-500 
+                                    hover:text-white"
+                        onClick={handleclearCart}>
+                    Clear Cart
+                </button>
         {data.map((p)=>(
                         
                         <div key={p.id} className="flex
