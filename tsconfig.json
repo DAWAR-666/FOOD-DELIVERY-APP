@@ -27,7 +27,7 @@
   },
   "include": [
     "src/**/*"                              /* Tell the compiler to check all files inside the 'src' folder */
-  ],
+, "babel.config.js"  ],
   "exclude": [
     "node_modules",                         /* Do not check files in node_modules */
     "dist"                                  /* Do not check generated files in dist */
