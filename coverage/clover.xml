@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1767948350139" clover="3.2.0">
-  <project timestamp="1767948350139" name="All files">
+<coverage generated="1767948512454" clover="3.2.0">
+  <project timestamp="1767948512454" name="All files">
     <metrics statements="26" coveredstatements="21" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="5" elements="39" coveredelements="27" complexity="0" loc="26" ncloc="26" packages="2" files="7" classes="7"/>
     <package name="components">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -12,10 +12,10 @@
       <file name="Header.tsx" path="C:\Users\dawar\OneDrive\Desktop\coding\webdev\FOOD-DELIVERY-APP\src\components\Header.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
       </file>
     </package>
     <package name="utils">
@@ -46,13 +46,13 @@
       <file name="useOnlineStatus.tsx" path="C:\Users\dawar\OneDrive\Desktop\coding\webdev\FOOD-DELIVERY-APP\src\utils\useOnlineStatus.tsx">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
       </file>
     </package>
   </project>

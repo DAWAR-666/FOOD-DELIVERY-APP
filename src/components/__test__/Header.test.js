@@ -16,3 +16,14 @@ test('should load header component', () => {
     const cart = screen.getByText('CART (0 items)');
     expect(cart).toBeInTheDocument();
 });
+test('should have logo in header component', () => {
+    render(
+        <BrowserRouter>
+        <Provider store={appStore}>
+            <Header />
+        </Provider>
+        </BrowserRouter>
+    );
+    const logo = screen.getByAltText('App Logo');
+    expect(logo).toBeInTheDocument();
+});
