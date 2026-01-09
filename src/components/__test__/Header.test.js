@@ -3,15 +3,16 @@ import '@testing-library/jest-dom';
 import Header from '../Header';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import appStore from '../../utils/appStore';
 
 test('should load header component', () => {
     render(
         <BrowserRouter>
-        <Provider store={store}>
+        <Provider store={appStore}>
             <Header />
         </Provider>
         </BrowserRouter>
     );
-    const cart = screen.getByText('Cart-0 items');
+    const cart = screen.getByText('CART (0 items)');
     expect(cart).toBeInTheDocument();
 });
