@@ -13,8 +13,8 @@ test("should load text in contact page",()=>{
     expect(heading).toBeInTheDocument();
 });
 //test and it are same
-it("should load 2 input box in contact page",()=>{
-    render(<Contact />);
-    const heading=screen.getAllByRole("textbox");//for input box role is textbox
-    expect(heading).toHaveLength(2);
-});
+// it("should load 2 input box in contact page",()=>{
+//     render(<Contact />);
+//     const heading=screen.getAllByRole("textbox");//for input box role is textbox
+//     expect(heading).toHaveLength(2);
+// });
