@@ -27,3 +27,14 @@ test('should have logo in header component', () => {
     const logo = screen.getByAltText('App Logo');
     expect(logo).toBeInTheDocument();
 });
+test('should have login button in header component', () => {
+    render(
+        <BrowserRouter>
+        <Provider store={appStore}>
+            <Header />
+        </Provider>
+        </BrowserRouter>
+    );
+    const loginBtn = screen.getByRole('button', { name: 'LOGIN' });
+    expect(loginBtn).toBeInTheDocument();
+});
