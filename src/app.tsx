@@ -1,4 +1,4 @@
-import React, { use } from "react";
+
 import ReactDOM from "react-dom/client";
 import {createBrowserRouter ,Outlet,RouterProvider} from "react-router-dom";   
 import Heading from "./components/Header";
@@ -25,7 +25,7 @@ const AppLayout= ()=>{
   return(
     <Provider store={appStore}>
     <UserContext.Provider value={({user:userName , setUserName})}>
-    <div className="font-serif font-bold">
+    <div className="font-serif font-bold min-h-screen flex flex-col">
      
         <Heading />
    
